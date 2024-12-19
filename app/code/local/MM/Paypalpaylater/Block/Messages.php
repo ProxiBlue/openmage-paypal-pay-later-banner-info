@@ -96,7 +96,7 @@ class MM_Paypalpaylater_Block_Messages extends Mage_Core_Block_Template {
 
         // check payment method availability
         $methodInstance = Mage::helper('payment')->getMethodInstance($this->_paymentMethodCode);
-        if (!$methodInstance || !$methodInstance->isAvailable($quote)) {
+        if (!$methodInstance) {
             $this->_shouldRender = false;
             return $result;
         }
