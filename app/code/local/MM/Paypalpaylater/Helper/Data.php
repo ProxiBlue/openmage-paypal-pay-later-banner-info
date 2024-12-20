@@ -1,7 +1,7 @@
 <?php
 class MM_Paypalpaylater_Helper_Data extends Mage_Core_Helper_Abstract {
 	
-	const SDK_SRC = 'https://www.paypal.com/sdk/js?client-id=%s&locale=%s&currency=%s&components=messages&enable-funding=paylater';
+	const SDK_SRC = 'https://www.paypal.com/sdk/js?client-id=%s&locale=%s&currency=%s&components=messages,buttons&disable-funding=bancontact,blik&enable-funding=card,paylater,credit';
 
 	public function getSrcSdk() {
 		$url = sprintf( MM_Paypalpaylater_Helper_Data::SDK_SRC,
